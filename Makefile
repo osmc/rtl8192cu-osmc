@@ -533,6 +533,7 @@ MODULE_NAME := $(MODULE_NAME)_mp
 EXTRA_CFLAGS += -DCONFIG_MP_INCLUDED
 endif
 
+KSRC:=$(shell pwd)/../../../../
 
 ifneq ($(KERNELRELEASE),)
 
