@@ -3871,6 +3871,7 @@ rtl8192c_dm_RF_Saving(
 	{
 		if(pPSTable->CurRFState == RF_Save)
 		{
+			return;
 			PHY_SetBBReg(pAdapter, rFPGA0_XCD_RFInterfaceSW  , 0x1C0000, 0x2); //Reg874[20:18]=3'b010
 			PHY_SetBBReg(pAdapter, rOFDM0_AGCParameter1, BIT3, 0); //RegC70[3]=1'b0
 			PHY_SetBBReg(pAdapter, rFPGA0_XCD_SwitchControl, 0xFF000000, 0x63); //Reg85C[31:24]=0x63
